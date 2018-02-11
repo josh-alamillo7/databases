@@ -20,7 +20,7 @@ module.exports = {
     }, 
     // a function which can be used to insert a message into the database
     post: function (data) {
-      console.log("MODELS data:", data);
+      console.log("MODELS data:", data); 
       dbConnection.query('INSERT IGNORE INTO users (username) VALUES("' + data.username + '")');
       dbConnection.query('INSERT IGNORE INTO rooms (roomname) VALUES("' + data.roomname + '")');
       
